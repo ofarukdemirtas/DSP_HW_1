@@ -13,7 +13,7 @@ for i = 1:length(sampling_rates)
     audio_data = getaudiodata(recObj); % Get recorded audio data
     
     % Calculate SNR
-    signal_start = round(length(audio_data) * 0.30); % Start of signal (30% into the recording)
+    signal_start = round(length(audio_data) * 0.03); % Start of signal (30% into the recording)
     signal_end = round(length(audio_data) * 0.97); % End of signal (97% into the recording)
     snr_value = calculate_snr(audio_data, signal_start, signal_end);
     disp(['SNR: ', num2str(snr_value), ' dB']);
